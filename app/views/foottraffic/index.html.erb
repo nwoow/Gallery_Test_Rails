@@ -1,0 +1,21 @@
+
+<h1>Import Text File</h1>
+  <%= form_tag foottraffic_index_path, method: "get", multipart: true do %>
+
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import Text File" %>
+     <% end %>
+
+     <br>
+<%
+if @r
+  @r.sort.each do |room, results|
+    average = (results[:total_time].to_i / results[:visitor_count]).floor
+    s = results[:visitor_count] > 1 ? 's' : ''
+%>
+
+Room <%=  room %>, <%=  average %> minute average visit, <%= results[:visitor_count] %>  Visitor <%= s %> Total
+<br>
+<% end %>
+
+  <% end %>
