@@ -8,6 +8,7 @@
 
      <br>
 <%
+# Logic to display final output
 if @r
   @r.sort.each do |room, results|
     average = (results[:total_time].to_i / results[:visitor_count]).floor
