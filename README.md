@@ -6,11 +6,11 @@ This is a test
 
 * Then Run bundle install
 
-* Then Run Rials s
+* Then Run Rails s
 
 * Open URL http://localhost:3000/foottraffic/index
 
-* You will see a import file
+* You will see an import file
 
 * Import a sample file here the name of the file is text.txt
 
